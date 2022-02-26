@@ -38,11 +38,14 @@ public class homework1 {
     public static void printR(int n,String[] NGL){
         for(int i=0; i < n; i++)
             System.out.println(NGL[i]);
+        System.out.println();
     }
 
     public static void main(String[] args) {
         int n=0, p=0;
         char[] alph= new char[args.length-2];
+        long start =System.currentTimeMillis();
+
         if(validate(args[0]) && validate(args[1])){
                 n=Integer.parseInt(args[0]);
                 p=Integer.parseInt(args[1]);
@@ -75,10 +78,26 @@ public class homework1 {
         boolean[][] NGM= new boolean[n][n];
         String[] NGL= new String[n];
         relations(n,NGM,NGL,words);
-        printR(n,words);
-        printR(n,NGL);
 
+        //printR(n,words);
+        //printR(n,NGL);
 
+        long end=System.currentTimeMillis();
+        double time= (double) (end-start);
+        System.out.print(time/1000);
+
+/*
+* Bonus
+* If we represent the words as nodes in a graph and then the edges between 2 nodes exist if the words have at least 1 letter from the alphabet in common.
+* The problem then becomes:  finding a number k which represents the size of the biggest cycle in the graph (k >= 3)
+* It can be proven the problem of finding Hamiltonian cycle, which is in NP-compl., reduces to this problem so they are polynomial equivalent.
+* So there is no efficient algorithm that can solve this problem.
+*
+* For a small n we can use backtracking to find all cycles and determine the greatest k.
+* Using dfs we visit the nodes in the graph and check if the current node has an edge with the starting node and update k.
+* For optimization we can check if the size is equal to n-1 if so then the graph contains a Cn graph.
+*
+* */
 
 
 
