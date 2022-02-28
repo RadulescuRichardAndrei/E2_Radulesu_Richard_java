@@ -125,6 +125,9 @@ public class homework1 {
 *
 * For a small n we can use backtracking to find all cycles and determine the greatest k.
 * Using dfs we visit the nodes in the graph and check if the current node has an edge with the starting node and update k.
+* --------------------
+* for k=3 function cycle3
+*
 * */
 
     }
