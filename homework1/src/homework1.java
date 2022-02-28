@@ -12,7 +12,7 @@ public class homework1 {
         else
             return true;
     }
-    static boolean LetterCheck(String a, String b){
+    static boolean letterCheck(String a, String b){
         for(int i=0; i < a.length(); i++)
             if(b.indexOf(a.charAt(i)) >= 0)
                 return true;
@@ -21,7 +21,7 @@ public class homework1 {
     static void relations(int n,boolean[][] NGM,String[] NGL,String[] words){
         for (int i=0; i < n; i++)
             for (int j=0; j < n; j++)
-                if(i != j && LetterCheck(words[i],words[j])) NGM[i][j] = true;
+                if(i != j && letterCheck(words[i],words[j])) NGM[i][j] = true;
                 else NGM[i][j] = false;
 
         for (int i=0; i < n; i++){
@@ -40,6 +40,31 @@ public class homework1 {
             System.out.println(NGL[i]);
         System.out.println();
     }
+
+    //bonus
+    public static void cycle3(int n, boolean[][] NGM,String[] words){
+        int i, j, k;
+        for(i=0;i<n;i++)
+            for(j=0;j<n;j++)
+                if(NGM[i][j]){
+                   for(k=0;k<n;k++)
+                       if(NGM[j][k] && NGM[i][k])
+                       {
+                           StringBuilder sb =new StringBuilder();
+                           sb.append(i);
+                           sb.append(' ');
+                           sb.append(j);
+                           sb.append(' ');
+                           sb.append(k);
+                           sb.append(' ');
+                           System.out.println(sb);
+                           return;
+                       }
+
+                }
+
+    }
+
 
     public static void main(String[] args) {
         int n=0, p=0;
@@ -78,16 +103,21 @@ public class homework1 {
         boolean[][] NGM= new boolean[n][n];
         String[] NGL= new String[n];
         relations(n,NGM,NGL,words);
-
         //printR(n,words);
+        //cycle3(n,NGM,words);
         //printR(n,NGL);
 
         long end=System.currentTimeMillis();
         double time= (double) (end-start);
-        System.out.print(time/1000);
+        System.out.print(time*1000);
+        System.out.print(" nanoseconds");
+
 
 /*
 * Bonus
+* Can you find the largest possible k?
+* short answear no
+* longer...
 * If we represent the words as nodes in a graph and then the edges between 2 nodes exist if the words have at least 1 letter from the alphabet in common.
 * The problem then becomes:  finding a number k which represents the size of the biggest cycle in the graph (k >= 3)
 * It can be proven the problem of finding Hamiltonian cycle, which is in NP-compl., reduces to this problem so they are polynomial equivalent.
@@ -95,13 +125,7 @@ public class homework1 {
 *
 * For a small n we can use backtracking to find all cycles and determine the greatest k.
 * Using dfs we visit the nodes in the graph and check if the current node has an edge with the starting node and update k.
-* For optimization we can check if the size is equal to n-1 if so then the graph contains a Cn graph.
-*
 * */
-
-
-
-
 
     }
 }
