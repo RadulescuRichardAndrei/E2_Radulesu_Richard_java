@@ -10,7 +10,8 @@ If the sum is greater then 9 it will return a function call with the sum as the 
 If there is then it will mark in the boolean matrix with true, othrwise false
 After that it will pass this new matrix and for every word it will create a new string containing the words that have a letter in common.
 5) Funct. printR: will print an array of strings (size n).
-6) MAIN :  it will validate the parameters from args. If the input is valid it will generate n words of size p with the given alphabet.
+6) Funct. cycle3: it will check if 3 words (W1 W2 W3) are neighbours in this way W1 <-> W2 <-> W3 <-> W1.
+7) MAIN :  it will validate the parameters from args. If the input is valid it will generate n words of size p with the given alphabet.
 After that it will call the function relations with the necesary parameters.
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------
