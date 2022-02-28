@@ -1,5 +1,6 @@
 # E2_Radulesu_Richard_java
 -lab1
+
 Sumdigit will remove the last digit of n add it to the sum until it runs out of digits.
 If the sum is greater then 9 it will return a function call with the sum as the parameter
 -homework1
