@@ -104,8 +104,9 @@ public class homework1 {
         String[] NGL= new String[n];
         relations(n,NGM,NGL,words);
         //printR(n,words);
-        //cycle3(n,NGM,words);
         //printR(n,NGL);
+        //cycle3(n,NGM,words);
+
 
         long end=System.currentTimeMillis();
         double time= (double) (end-start);
