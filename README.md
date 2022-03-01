@@ -17,5 +17,14 @@ After that it will pass this new matrix and for every word it will create a new 
 7) MAIN :  it will validate the parameters from args. If the input is valid it will generate n words of size p with the given alphabet.
 After that it will call the function relations with the necesary parameters.
 
+-lab2
+
+Rooms: varibles: string name, int size start end 
+generated the setter getter and made constructor for the class 
+override the toString method to return a string containing all the variables
+
+Events: same as before
+type: made and enum
+Main: in the main method I created objects of type Rooms and Events just like in the laboratory example and printed the result of the toString methode for 2 of the objects.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------
  
