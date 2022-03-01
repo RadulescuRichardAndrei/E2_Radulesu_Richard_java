@@ -19,12 +19,11 @@ After that it will call the function relations with the necesary parameters.
 
 -lab2
 
-Rooms: varibles: string name, int size start end 
+1) Rooms: varibles: string name, int size start end 
 generated the setter getter and made constructor for the class 
 override the toString method to return a string containing all the variables
-
-Events: same as before
-type: made and enum
-Main: in the main method I created objects of type Rooms and Events just like in the laboratory example and printed the result of the toString methode for 2 of the objects.
+2) Events: same as before
+3) type: made and enum
+4) Main: in the main method I created objects of type Rooms and Events just like in the laboratory example and printed the result of the toString methode for 2 of the objects.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------
  
