@@ -16,7 +16,7 @@ public class Main {
             }
 
         if(j==listR.size())
-            System.out.println(listE.get(i).getName() + "not assigned");
+            System.out.println(listE.get(i).getName() + " not assigned");
         }
 
 
@@ -31,6 +31,7 @@ public class Main {
     listE.add(new Event("L2",30,8,10));
     listE.add(new Event("C2",100,10,12));
     listE.add(new Event("L3",30,10,12));
+    listE.add(new Event("L4",70,12,13));
 
     listR.add(new Laboratory("401",30));
     listR.add(new Laboratory("403",30));
@@ -42,9 +43,7 @@ public class Main {
     listE.sort(Comparator.comparing(Event::getEnd).thenComparing(Event::getSize));
     listR.sort(Comparator.comparing(Room::getCapacity));
 
-        System.out.println(listE);
-        System.out.println(listR);
-        assignRoom(listE,listR);
+    assignRoom(listE,listR);
 
 
     }
