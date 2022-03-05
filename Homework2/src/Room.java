@@ -1,6 +1,6 @@
 public class Room {
-    private static String name;
-    private static int capacity;
+    private String name;
+    private int capacity;
 
 
     public Room(String n, int cap) {
@@ -8,26 +8,26 @@ public class Room {
         capacity=cap;
     }
 
-    public static void setCapacity(int capacity) {
-        Room.capacity = capacity;
+    public void setCapacity(int cap) {
+        capacity = cap;
     }
 
-    public static void setName(String name) {
-        Room.name = name;
+    public void setName(String nm) {
+        name = nm;
     }
 
-    public static int getCapacity() {
+    public int getCapacity() {
         return capacity;
     }
 
-    public static String getName() {
+    public String getName() {
         return name;
     }
 
     @Override
     public String toString() {
         return "Room{" +
-                "roomType= " + roomType + " Name= " + name + " Capacity= " + String.valueOf(capacity) +
+                " Name= " + name + " Capacity= " + String.valueOf(capacity) +
                 '}';
     }
 
