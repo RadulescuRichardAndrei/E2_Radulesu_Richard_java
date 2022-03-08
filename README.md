@@ -25,5 +25,10 @@ override the toString method to return a string containing all the variables
 2) Events: same as before
 3) type: made and enum
 4) Main: in the main method I created objects of type Rooms and Events just like in the laboratory example and printed the result of the toString methode for 2 of the objects.
+
+-homework2
+1) All classes from lab2 but no more enum
+2) Two classes that extends the Room class: Laboratory, LectureHall
+3) Main: I instanciate 2 arraysList of type Event and Room and call the assignRoom function. The assignRoom function uses a greedy algorithm (events that end earlier takes priority and as a second criteria the size of the event takes priority) to assigns a room for as many events as possible.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------
  
