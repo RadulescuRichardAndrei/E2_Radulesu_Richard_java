@@ -16,5 +16,6 @@ public class Main {
         System.out.println(r401.toString());
         r401.setCapacity(35);
         System.out.println(r401.toString());
+        System.out.println(r401.getroomType());
     }
 }
