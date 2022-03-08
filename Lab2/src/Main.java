@@ -12,6 +12,9 @@ public class Main {
         Rooms r309= new Rooms("309",100, type.Lecture_hall);
 
         System.out.println(C1.toString());
+        System.out.println(C2.toString());
+        System.out.println(r401.toString());
+        r401.setCapacity(35);
         System.out.println(r401.toString());
     }
 }

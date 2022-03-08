@@ -1,7 +1,7 @@
 public class Rooms {
-    private static String name;
-    private static int capacity;
-    private static type roomType;
+    private String name;
+    private int capacity;
+    private type roomType;
 
     public Rooms(String n, int cap, type rT) {
         name=n;
@@ -9,19 +9,19 @@ public class Rooms {
         roomType = rT;
     }
 
-    public static void setCapacity(int capacity) {
-        Rooms.capacity = capacity;
+    public void setCapacity(int cap) {
+        capacity = cap;
     }
 
-    public static void setName(String name) {
-        Rooms.name = name;
+    public void setName(String nm) {
+        name = nm;
     }
 
-    public static int getCapacity() {
+    public int getCapacity() {
         return capacity;
     }
 
-    public static String getName() {
+    public String getName() {
         return name;
     }
 
@@ -29,7 +29,7 @@ public class Rooms {
         this.roomType = roomType;
     }
 
-    public static type getroomType(){
+    public type getroomType(){
         return roomType;
     }
 

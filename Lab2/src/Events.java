@@ -1,6 +1,6 @@
 public class Events {
-    private static String name;
-    private static int size, start, end;
+    private String name;
+    private int size, start, end;
 
     public Events(String n, int si, int st, int en) {
         name=n;
@@ -9,36 +9,36 @@ public class Events {
         end=en;
     }
 
-    public static String getName() {
+    public String getName() {
         return name;
     }
 
-    public static int getStart() {
+    public int getStart() {
         return start;
     }
 
-    public static int getEnd() {
+    public int getEnd() {
         return end;
     }
 
-    public static int getSize() {
+    public int getSize() {
         return size;
     }
 
-    public static void setName(String name) {
-        Events.name = name;
+    public void setName(String nm) {
+        name = nm;
     }
 
-    public static void setStart(int start) {
-        Events.start = start;
+    public void setStart(int st) {
+        start = st;
     }
 
-    public static void setEnd(int end) {
-        Events.end = end;
+    public void setEnd(int en) {
+        end = en;
     }
 
-    public static void setSize(int size) {
-        Events.size = size;
+    public void setSize(int sz) {
+        size = sz;
     }
 
     @Override
