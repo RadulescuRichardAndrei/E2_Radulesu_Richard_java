@@ -1,14 +1,21 @@
 import java.util.*;
 
 public class Main {
-
-
+    /**
+     * This method uses a greedy algorithm (events that end earlier takes priority and as a second criteria the size of the event takes priority) to assigns a room for as many events given as parameters.
+     *
+     * @param listE a arrayList of the object type Event
+     * @param listR a arrayList of the object type Room
+     */
     public static void assignRoom(ArrayList <Event> listE, ArrayList <Room> listR){
-    int[] lastUsed = new int[listR.size()];
-    int j;
 
-    for(int i=0; i< listE.size(); i++){
-        for (j=0; j < listR.size(); j++)
+    int[] lastUsed = new int[listR.size()];
+        listE.sort(Comparator.comparing(Event::getEnd).thenComparing(Event::getSize));
+        listR.sort(Comparator.comparing(Room::getCapacity));
+
+        for(int i=0; i< listE.size(); i++){
+            int j;
+            for (j=0; j < listR.size(); j++)
             if(listE.get(i).getSize()<=listR.get(j).getCapacity() && listE.get(i).getStart()>=lastUsed[j]){
                 System.out.println(listR.get(j).getName() + ": " + listE.get(i).getName());
                 lastUsed[j]=listE.get(i).getEnd();
@@ -21,6 +28,7 @@ public class Main {
 
 
     }
+
     public static void main(String[] args){
     ArrayList <Event> listE = new ArrayList<Event>();
     ArrayList <Room> listR = new ArrayList<Room>();
@@ -38,10 +46,6 @@ public class Main {
     listR.add(new Laboratory("405",30));
     listR.add(new LectureHall("309",100));
 
-
-
-    listE.sort(Comparator.comparing(Event::getEnd).thenComparing(Event::getSize));
-    listR.sort(Comparator.comparing(Room::getCapacity));
 
     assignRoom(listE,listR);
 
