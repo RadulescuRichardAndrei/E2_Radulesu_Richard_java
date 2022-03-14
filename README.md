@@ -16,6 +16,7 @@ After that it will pass this new matrix and for every word it will create a new 
 6) Funct. cycle3: it will check if 3 words (W1 W2 W3) are neighbours in this way W1 <-> W2 <-> W3 <-> W1.
 7) MAIN :  it will validate the parameters from args. If the input is valid it will generate n words of size p with the given alphabet.
 After that it will call the function relations with the necesary parameters.
+----------------------------------------------------------------------------------------------------------------------------------------------------------
 
 -lab2
 
