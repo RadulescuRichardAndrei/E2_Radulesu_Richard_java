@@ -1,4 +1,4 @@
-public class Computer extends Node implements Storage, Identifiable{
+public class Computer extends Node implements Storage, Identifiable {
     private String ip;
     private int storageCap;
 
@@ -25,7 +25,7 @@ public class Computer extends Node implements Storage, Identifiable{
     }
 
 
-       @Override
+    @Override
     public String toString() {
         return "Computer{" +
                 "ip='" + getIp() + '\'' +

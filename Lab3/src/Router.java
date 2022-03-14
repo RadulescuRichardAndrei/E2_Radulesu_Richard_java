@@ -1,4 +1,4 @@
-public class Router extends Node implements Identifiable{
+public class Router extends Node implements Identifiable {
     private String ip;
 
     public Router(String name, String macAddr, String location, String ip) {

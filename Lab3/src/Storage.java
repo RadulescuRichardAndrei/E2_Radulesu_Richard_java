@@ -1,12 +1,12 @@
 public interface Storage {
 
-   default int converse(String conv,int storageCap) {
-      if(conv.equals("megabyte"))
-         return storageCap*1024;
-      if(conv.equals("kilobyte"))
-         return storageCap*1024*1024;
-      if(conv.equals("byte"))
-         return storageCap*1024*1024*1024;
-      return storageCap;
-   }
+    default int converse(Capacity conv, int storageCap) {
+        if (conv == Capacity.MEGABYTE)
+            return storageCap * 1024;
+        if (conv == Capacity.KYLOBYTE)
+            return storageCap * 1024 * 1024;
+        if (conv == Capacity.BYTE)
+            return storageCap * 1024 * 1024 * 1024;
+        return storageCap;
+    }
 }

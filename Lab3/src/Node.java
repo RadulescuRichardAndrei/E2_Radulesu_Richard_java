@@ -2,7 +2,7 @@ import java.util.Map;
 
 public abstract class Node {
     private String name, macAddr, location;
-    private Map<String,Integer> cost;
+    private Map<String, Integer> cost;
 
     public Map<String, Integer> getCost() {
         return cost;
