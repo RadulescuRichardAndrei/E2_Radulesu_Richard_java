@@ -24,24 +24,15 @@ public class Computer extends Node implements Storage, Identifiable{
         this.storageCap = stCap;
     }
 
-    public int converse(String conv){
-        if(conv.equals("megabyte"))
-            return storageCap*1024;
-        if(conv.equals("kilobyte"))
-            return storageCap*1024*1024;
-        if(conv.equals("byte"))
-            return storageCap*1024*1024*1024;
-        return storageCap;
-    }
 
-    @Override
+       @Override
     public String toString() {
         return "Computer{" +
-                "ip='" + ip + '\'' +
-                ", storageCap=" + storageCap +
-                ", name='" + name + '\'' +
-                ", macAddr='" + macAddr + '\'' +
-                ", location='" + location + '\'' +
+                "ip='" + getIp() + '\'' +
+                ", storageCap=" + getStorageCap() +
+                ", name='" + getName() + '\'' +
+                ", macAddr='" + getMacAddr() + '\'' +
+                ", location='" + getLocation() + '\'' +
                 '}';
     }
 }

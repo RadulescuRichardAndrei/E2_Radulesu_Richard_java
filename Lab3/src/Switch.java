@@ -7,9 +7,9 @@ public class Switch extends Node{
     @Override
     public String toString() {
         return "Switch{" +
-                "name='" + name + '\'' +
-                ", macAddr='" + macAddr + '\'' +
-                ", location='" + location + '\'' +
+                "name='" + getName() + '\'' +
+                ", macAddr='" + getMacAddr() + '\'' +
+                ", location='" + getLocation() + '\'' +
                 '}';
     }
 }
