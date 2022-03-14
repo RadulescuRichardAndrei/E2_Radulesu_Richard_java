@@ -31,4 +31,20 @@ override the toString method to return a string containing all the variables
 2) Two classes that extends the Room class: Laboratory, LectureHall
 3) Main: I instanciate 2 arraysList of type Event and Room and call the assignRoom function. The assignRoom function uses a greedy algorithm (events that end earlier takes priority and as a second criteria the size of the event takes priority) to assigns a room for as many events as possible.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+-lab3
+1) Class Network:
+1. Methode printIdentifiable prints a list of all the Nodes that implement the Identifiable interface.
+2. Methode printNetworkCosts prints the map of every node which contains the name of the neighbour node and the cost of the edge between them.
+3. Methode floydWasrshall applies the known algorithm for the network.
+4. Methode dikstra applies the known algoritm and return the cost from source to target.
+5. Methode generateNetwork generates a network randomly(kinda).
+6. Methode initialize generates the network from the example.
+2) Class MyRandom contains several methodes to generate string/integers in different formats/sizes.
+3) Class Node: abstract class has strings with the name, macAddres, location, a map for the cost between nodes, setter and getters for them.
+4) Storage Interface: has a default methode converse with 2 param one of type Capacity (an enum) and one of type int. It returns the integer in the given unit measure.
+5) Identifiable Interface: has one methode getIp which is implemented in the classes Computer/Storage.
+6) Class Computer, Switch, Router that inherite the Node class and implement the Storage or/and Identifiable interfaces.
+7) NetworkTest: asserts that the function dikstra from the network class returns the expected value for a known input.
+
  
