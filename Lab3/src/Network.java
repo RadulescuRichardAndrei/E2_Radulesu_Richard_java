@@ -68,8 +68,8 @@ public class Network {
                 if (node.getKey() != j && Objects.nonNull(listN.get(node.getKey()).getCost()) &&
                         listN.get(node.getKey()).getCost().containsKey(listN.get(j).getName())) {
                     int weight = listN.get(node.getKey()).getCost().get(listN.get(j).getName());
-                    if (dist[j] > dist[node.getKey()] + weight) {
-                        dist[j] = dist[node.getKey()] + weight;
+                    if (dist[j] > dist[node.getKey()] + weight) {//product if cost is probability (0,1]
+                        dist[j] = dist[node.getKey()] + weight;//here to
                         pq.add(new AbstractMap.SimpleEntry<>(j, dist[j]));
                     }
                 }
