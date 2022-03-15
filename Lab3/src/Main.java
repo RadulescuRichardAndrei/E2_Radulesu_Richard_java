@@ -12,6 +12,5 @@ public class Main {
         N.floydWasrshall();
         System.out.println(N.dikstra(0,N.listN.size()-2));
 
-
     }
 }

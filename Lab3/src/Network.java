@@ -32,11 +32,13 @@ public class Network {
             Arrays.fill(row, infinity);
 
         for (int i = 0; i < listN.size(); i++)
-            for (int j = 0; j < listN.size(); j++)
-                if (i != j && Objects.nonNull(listN.get(i).getCost()) &&
-                        listN.get(i).getCost().containsKey(listN.get(j).getName())) {
-                    dist[i][j] = listN.get(i).getCost().get(listN.get(j).getName());
-                }
+            if(listN.get(i) instanceof Identifiable) {
+                for (int j = 0; j < listN.size(); j++)
+                    if (i != j && listN.get(j) instanceof Identifiable && Objects.nonNull(listN.get(i).getCost()) &&
+                            listN.get(i).getCost().containsKey(listN.get(j).getName())) {
+                        dist[i][j] = listN.get(i).getCost().get(listN.get(j).getName());
+                    }
+            }
         for (int i = 0; i < listN.size(); i++)
             dist[i][i] = 0;
 
