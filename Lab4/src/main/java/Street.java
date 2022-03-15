@@ -1,6 +1,24 @@
 import java.util.Objects;
 
 public class Street {
+    private Intersect inter1, inter2;
+
+    public Intersect getInter1() {
+        return inter1;
+    }
+
+    public void setInter1(Intersect inter1) {
+        this.inter1 = inter1;
+    }
+
+    public Intersect getInter2() {
+        return inter2;
+    }
+
+    public void setInter2(Intersect inter2) {
+        this.inter2 = inter2;
+    }
+
     private String name;
     private int length;
 

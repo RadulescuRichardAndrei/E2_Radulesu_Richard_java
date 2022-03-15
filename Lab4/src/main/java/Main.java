@@ -1,4 +1,5 @@
 import java.util.*;
+import java.util.stream.Stream;
 
 public class Main {
 
@@ -6,7 +7,11 @@ public class Main {
         List<Street> streetList=new LinkedList<>();
         Set<Intersect> interSet=new HashSet<>();
 
-        streetList.sort(Comparator.comparing(Street::getName).thenComparing(Street::getLength));
+        //interSet= Stream.of("i1","i2","i3","i4","i5","i6","i7","i8","i9");
+        //take a break
+
+
+        streetList.sort(Comparator.comparing(Street::getLength));
 
     }
 }
