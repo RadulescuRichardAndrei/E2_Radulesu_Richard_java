@@ -48,7 +48,7 @@ public class City {
     }
 
     public void query(int stLength) {
-        mapInSt=new HashMap<>();
+        mapInSt = new HashMap<>();
         for (Street s : listSt) {
             if (!mapInSt.containsKey(s.getInter1().getName()))
                 mapInSt.put(s.getInter1().getName(), 0);
@@ -65,9 +65,17 @@ public class City {
         //System.out.println(mapInSt);
 
         getListSt().stream().filter(street -> street.getLength() > stLength)
-                .filter(street -> mapInSt.get(street.getInter1().getName())>3 || mapInSt.get(street.getInter2().getName())>3)
+                .filter(street -> mapInSt.get(street.getInter1().getName()) > 3 || mapInSt.get(street.getInter2().getName()) > 3)
                 .forEach(System.out::println);
 
+    }
+
+    public int costStreetBetween(Street s1, Street s2) {
+        for (Street s : listSt) {
+            if ((s.getInter1() == s1.getInter2() && s.getInter2() == s2.getInter1()))
+                return s.getLength();
+        }
+        return 0;
     }
 
     public void generateCity() {

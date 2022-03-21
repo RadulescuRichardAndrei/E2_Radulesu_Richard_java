@@ -51,6 +51,13 @@ public class Street {
         this.length = length;
     }
 
+    public boolean isIncident(Street myStreet) {
+        if (myStreet.getInter1() == getInter1() || myStreet.getInter1() == getInter2() ||
+                myStreet.getInter2() == getInter1() || myStreet.getInter2() == getInter2() )
+            return true;
+        return false;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -73,4 +80,5 @@ public class Street {
                 ", length=" + length +
                 '}' + "\n";
     }
+
 }
