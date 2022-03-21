@@ -5,6 +5,13 @@ public class Street {
     private String name;
     private int length;
 
+    public Street(Intersect inter1, Intersect inter2, String name, int length) {
+        this.inter1 = inter1;
+        this.inter2 = inter2;
+        this.name = name;
+        this.length = length;
+    }
+
     public Street(Intersect inter1, Intersect inter2, String name) {
         this.inter1 = inter1;
         this.inter2 = inter2;
@@ -63,6 +70,7 @@ public class Street {
                 "inter1=" + inter1 +
                 ", inter2=" + inter2 +
                 ", name='" + name + '\'' +
-                '}'+"\n";
+                ", length=" + length +
+                '}' + "\n";
     }
 }

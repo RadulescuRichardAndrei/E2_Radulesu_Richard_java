@@ -14,7 +14,7 @@ public class Main {
         myCity.generateCity();
         System.out.println(myCity.getSetIn());
         System.out.println(myCity.getListSt());
-
+        myCity.query(10);
         //streetList.sort(Comparator.comparing(Street::getLength));
 
     }
