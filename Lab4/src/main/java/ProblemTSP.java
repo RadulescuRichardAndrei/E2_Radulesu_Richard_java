@@ -1,5 +1,7 @@
+import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Set;
 
 public class ProblemTSP {
 
@@ -72,6 +74,72 @@ public class ProblemTSP {
             }
             return false;
 
+    }
+    public void generateKnownProb(){
+        List<Street> streetList = new LinkedList<>();
+        Set<Intersect> interSet = new HashSet<>();
+        for (int i=1;i<=9;i++){
+            interSet.add(new Intersect("In"+i));
+        }
+        Intersect i1, i2;
+
+        i1=interSet.stream().skip(1).findFirst().orElse(null);
+        i2=interSet.stream().skip(2).findFirst().orElse(null);
+        streetList.add(new Street(i1,i2,"Street1",2));
+
+        i1=interSet.stream().skip(1).findFirst().orElse(null);
+        i2=interSet.stream().skip(4).findFirst().orElse(null);
+        streetList.add(new Street(i1,i2,"Street2",2));
+
+        i1=interSet.stream().skip(1).findFirst().orElse(null);
+        i2=interSet.stream().skip(3).findFirst().orElse(null);
+        streetList.add(new Street(i1,i2,"Street3",2));
+
+        i1=interSet.stream().skip(3).findFirst().orElse(null);
+        i2=interSet.stream().skip(5).findFirst().orElse(null);
+        streetList.add(new Street(i1,i2,"Street4",3));
+
+        i1=interSet.stream().skip(5).findFirst().orElse(null);
+        i2=interSet.stream().skip(6).findFirst().orElse(null);
+        streetList.add(new Street(i1,i2,"Street5",5));
+
+        i1=interSet.stream().skip(6).findFirst().orElse(null);
+        i2=interSet.stream().skip(7).findFirst().orElse(null);
+        streetList.add(new Street(i1,i2,"Street6",1));
+
+        i1=interSet.stream().skip(7).findFirst().orElse(null);
+        i2=interSet.stream().skip(8).findFirst().orElse(null);
+        streetList.add(new Street(i1,i2,"Street7",1));
+
+        i1=interSet.stream().skip(8).findFirst().orElse(null);
+        i2=interSet.stream().skip(2).findFirst().orElse(null);
+        streetList.add(new Street(i1,i2,"Street8",3));
+
+        i1=interSet.stream().skip(2).findFirst().orElse(null);
+        i2=interSet.stream().skip(4).findFirst().orElse(null);
+        streetList.add(new Street(i1,i2,"Street9",2));
+
+        i1=interSet.stream().skip(4).findFirst().orElse(null);
+        i2=interSet.stream().skip(5).findFirst().orElse(null);
+        streetList.add(new Street(i1,i2,"Street10",2));
+
+        i1=interSet.stream().skip(8).findFirst().orElse(null);
+        i2=interSet.stream().skip(5).findFirst().orElse(null);
+        streetList.add(new Street(i1,i2,"Street11",1));
+
+        i1=interSet.stream().skip(4).findFirst().orElse(null);
+        i2=interSet.stream().skip(9).findFirst().orElse(null);
+        streetList.add(new Street(i1,i2,"Street12",2));
+
+        i1=interSet.stream().skip(7).findFirst().orElse(null);
+        i2=interSet.stream().skip(9).findFirst().orElse(null);
+        streetList.add(new Street(i1,i2,"Street13",1));
+
+        i1=interSet.stream().skip(6).findFirst().orElse(null);
+        i2=interSet.stream().skip(9).findFirst().orElse(null);
+        streetList.add(new Street(i1,i2,"Street14",1));
+
+        setCityTsp(new City("TestCity",streetList,interSet));
     }
 
 }
