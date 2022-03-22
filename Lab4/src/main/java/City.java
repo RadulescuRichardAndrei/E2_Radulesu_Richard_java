@@ -70,34 +70,48 @@ public class City {
 
     }
 
-    public int costStreetBetween(Street s1, Street s2) {
+    public int costStreetBetweenIn(Intersect i1, Intersect i2) {
         for (Street s : listSt) {
-            if ((s.getInter1() == s1.getInter2() && s.getInter2() == s2.getInter1()))
+            if (s.equalStByIn(i1, i2))
                 return s.getLength();
         }
         return 0;
     }
 
-    public void generateCity() {
+    public void generateCity(int nbInter, int nbStr) {
         Faker fk = new Faker();
         setName(fk.address().cityName());
         List<Street> streetList = new LinkedList<>();
         Set<Intersect> interSet = new HashSet<>();
 
-        int nbInter = (int) (Math.random() * 20 + 10);
+
         for (int i = 0; i < nbInter; i++) {
             fk = new Faker();
             interSet.add(new Intersect(fk.address().streetName()));
         }
-        int nbStr = (int) (Math.random() * 40 + 20);
+
         for (int i = 0; i < nbStr; i++) {
-            int in1 = (int) (Math.random() * nbInter);
-            int in2 = (int) (Math.random() * nbInter);
-            int length = (int) (Math.random() * 50 + 1);
+            Intersect i1, i2;
+
+            while (true) {//no 2 edge between same nodes
+                int in1 = (int) (Math.random() * nbInter);
+                int in2 = (int) (Math.random() * nbInter);
+                while (in2 == in1) in2 = (int) (Math.random() * nbInter);//no edge to self
+
+                i1 = interSet.stream().skip(in1).findFirst().orElse(null);
+                i2 = interSet.stream().skip(in2).findFirst().orElse(null);
+                boolean exit = true;
+
+                    for (Street st : streetList)
+                        if (st.equalStByIn(i1, i2))
+                            exit = false;
+
+                if (exit) break;
+
+            }
+            int length = (int) (Math.random() * 50 + 26);
             fk = new Faker();
-            streetList.add(new Street(interSet.stream().skip(in1).findFirst().orElse(null),
-                    interSet.stream().skip(in2).findFirst().orElse(null),
-                    fk.address().streetName(), length));
+            streetList.add(new Street(i1, i2, fk.address().streetName(), length));
         }
         setListSt(streetList);
         setSetIn(interSet);

@@ -1,43 +1,77 @@
+import java.util.LinkedList;
 import java.util.List;
 
 public class ProblemTSP {
 
     private City cityTsp;
+    private List<Street> Route;
 
-    public ProblemTSP() {}
+    public List<Street> getRoute() {
+        return Route;
+    }
+
+    public void setRoute(List<Street> route) {
+        Route = route;
+    }
+
+    public ProblemTSP() {
+        cityTsp = new City();
+        Route = new LinkedList<>();
+    }
 
     public ProblemTSP(City cytyTsp) {
         this.cityTsp = cytyTsp;
     }
 
-    public City getCytyTsp() {
+    public City getCityTsp() {
         return cityTsp;
     }
 
-    public void setCytyTsp(City cytyTsp) {
-        this.cityTsp = cytyTsp;
-    }
-    public void generateProb(){
-        cityTsp.generateCity();
+    public void setCityTsp(City cityTsp) {
+        this.cityTsp = cityTsp;
     }
 
-    public int findHamilCycle(boolean[] used, int cost, Street lastSt, int count, int answer, List<Street> Route) {
-        int value = cityTsp.costStreetBetween(lastSt, cityTsp.getListSt().get(0));
-        if (count == cityTsp.getSetIn().size() && value > 0)
-            return Math.min(answer, cost + value);
-        for (int i = 0; i < cityTsp.getListSt().size(); i++) {
-            if (used[i] == false && lastSt.isIncident(cityTsp.getListSt().get(i))) {
+    public void generateRandomProb(int nbIn, int nbStr) {
+        cityTsp.generateCity(nbIn, nbStr);
+    }
 
-                used[i] = true;
-                Route.add(cityTsp.getListSt().get(i));
-                answer = findHamilCycle(used, cost + cityTsp.getListSt().get(i).getLength(),
-                        cityTsp.getListSt().get(i), count + 1, answer, Route);
-                Route.remove(cityTsp.getListSt().get(i));
-                used[i] = false;
+    public void solveProb() {
+        boolean[] used = new boolean[getCityTsp().getListSt().size()];
 
+        used[0] = true;
+        getRoute().add(getCityTsp().getListSt().get(0));
+        findHamilCycle(used, getCityTsp().getListSt().get(0).getInter2(), 0);
+        int ans = Route.stream().mapToInt(Street::getLength).sum();
+        System.out.println("Cost of path is: " + ans + "\n" + "Path is:");
+        System.out.println(getRoute());
+    }
+
+    public boolean findHamilCycle(boolean[] used, Intersect lastIn, int count) {
+
+        if (count == cityTsp.getSetIn().size() - 2) {
+            for (Street s : getCityTsp().getListSt())
+                if (s.equalStByIn(lastIn, getCityTsp().getListSt().get(0).getInter1())) {
+                    getRoute().add(s);
+                    return true;
+                }
+        } else
+            for (int i = 1; i < cityTsp.getListSt().size(); i++) {
+                if (!used[i] && cityTsp.getListSt().get(i).containIn(lastIn) &&
+                        cityTsp.getListSt().get(i).otherIn(lastIn) != getCityTsp().getListSt().get(0).getInter1()) {
+
+                    used[i] = true;
+                    getRoute().add(cityTsp.getListSt().get(i));
+
+                    if(!findHamilCycle(used, cityTsp.getListSt().get(i).otherIn(lastIn), count + 1)) {
+                        getRoute().remove(cityTsp.getListSt().get(i));
+                        used[i] = false;
+                    }
+                    else return true;
+
+                }
             }
-        }
-        return answer;
+            return false;
+
     }
 
 }

@@ -30,6 +30,24 @@ public class Street {
         return inter2;
     }
 
+    public boolean equalStByIn(Intersect i1, Intersect i2) {
+        if ((getInter1() == i1 && getInter2() == i2) || (getInter1() == i2 && getInter2() == i1))
+            return true;
+        return false;
+    }
+
+    public boolean containIn(Intersect i1) {
+        if (getInter1() == i1 || getInter2() == i1)
+            return true;
+        return false;
+    }
+    public Intersect otherIn(Intersect i1){
+        if(getInter2()==i1)
+            return getInter1();
+        return getInter2();
+    }
+
+
     public void setInter2(Intersect inter2) {
         this.inter2 = inter2;
     }
@@ -51,12 +69,6 @@ public class Street {
         this.length = length;
     }
 
-    public boolean isIncident(Street myStreet) {
-        if (myStreet.getInter1() == getInter1() || myStreet.getInter1() == getInter2() ||
-                myStreet.getInter2() == getInter1() || myStreet.getInter2() == getInter2() )
-            return true;
-        return false;
-    }
 
     @Override
     public boolean equals(Object o) {
