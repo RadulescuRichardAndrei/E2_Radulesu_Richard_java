@@ -109,7 +109,7 @@ public class City {
                 if (exit) break;
 
             }
-            int length = (int) (Math.random() * 50 + 26);
+            int length = (int) (Math.random() * 50 + 1);
             fk = new Faker();
             streetList.add(new Street(i1, i2, fk.address().streetName(), length));
         }

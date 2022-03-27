@@ -18,8 +18,8 @@ public class Main {
 
         //streetList.sort(Comparator.comparing(Street::getLength));
         ProblemTSP Pb= new ProblemTSP();
-        //Pb.generateRandomProb(10,30);
-        Pb.generateKnownProb();
+        Pb.generateRandomProb(10,30);
+        //Pb.generateKnownProb();
         System.out.println(Pb.getCityTsp().getSetIn());
         System.out.println(Pb.getCityTsp().getListSt());
         Pb.solveProb();
