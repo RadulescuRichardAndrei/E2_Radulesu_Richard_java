@@ -1,4 +1,4 @@
-package lab5;
+package my_errors;
 
 public class IncorectFileNameException extends Exception{
     public IncorectFileNameException(String errMsg){

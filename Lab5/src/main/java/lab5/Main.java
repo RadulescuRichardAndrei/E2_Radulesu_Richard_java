@@ -1,5 +1,6 @@
 package lab5;
 
+import bonus.MaxFlowProblem;
 import comands.*;
 import org.apache.log4j.BasicConfigurator;
 
@@ -28,6 +29,12 @@ public class Main {
 
         SaveCommand sv=new SaveCommand();
         sv.implement(c);
+
+        MaxFlowProblem M = new MaxFlowProblem();
+        M.generateProblem(4,3);
+        System.out.println(M.getGraph());
+        System.out.println(M.maximumCardinalityMatching());
+        System.out.println(M.minimumEdgeCovering());
 
     }
 }

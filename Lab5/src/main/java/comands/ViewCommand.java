@@ -17,13 +17,12 @@ public class ViewCommand extends Command<Item> {
             File f=new File(I.getLocation());
             myD.open(f);
         }
-        else{
+        else if(I.getType().equals("site")){
             URI myUri= URI.create(I.getLocation());
             myD.browse(myUri);
 
         }
-    }
-    catch (Exception evt){
+    }catch (Exception evt){
         JOptionPane.showMessageDialog(null,evt.getMessage());
     }
 
