@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Text?>
+<?import GUI.BoardGui?>
+<?import org.controlsfx.control.GridCell?>
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="GUI.Game"
+            prefHeight="400.0" prefWidth="600.0"
+           >
+
+
+        <top>
+
+            <HBox alignment="TOP_CENTER">
+                <children>
+                    <Text  text="Grid size:" textAlignment="CENTER"  />
+                    <TextField text="5"  />
+                    <Button text="Create" alignment="CENTER_RIGHT" contentDisplay="CENTER" textAlignment="CENTER"  />
+                </children>
+
+            </HBox>
+        </top>
+<center>
+    <GridPane fx:id="myGrid" />
+</center>
+
+
+    <bottom>
+            <HBox alignment="BOTTOM_CENTER">
+                <children>
+                    <Button text="Load" alignment="CENTER_LEFT" contentDisplay="CENTER" textAlignment="CENTER" />
+                    <Button text="Save" alignment="CENTER_RIGHT" contentDisplay="CENTER" textAlignment="CENTER" />
+                </children>
+            </HBox>
+    </bottom>
+
+
+</BorderPane>
+
+
+
