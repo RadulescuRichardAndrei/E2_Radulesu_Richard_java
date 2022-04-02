@@ -47,5 +47,21 @@ override the toString method to return a string containing all the variables
 5) Identifiable Interface: has one methode getIp which is implemented in the classes Computer/Storage.
 6) Class Computer, Switch, Router that inherite the Node class and implement the Storage or/and Identifiable interfaces.
 7) NetworkTest: asserts that the function dikstra from the network class returns the expected value for a known input.
+----------------------------------------------------------------------------------------------------------------------------------------------------------
 
+ -lab5
+ 1) Abstract class Comand with different classes that extend it with different functionalities:
+ *AddCommand adds a new item in the catalog(param)
+ *listCommand prints the item list of the catalog(param)
+ *LoadCommand reads from json file and changes the Catalog(param)
+ *ReportCommand creates and html using velocity library after a template
+ *SaveCommand saves the catalog(param) item list in a json file
+ *ViewCommand opens in browser/default program of an item(param) in function of the item.type
+ 2) Catalog class has a item list and all the basic stuff
+ 3) Item class constr get/setter all the basic stuff
+ 4) MaxFlowProblem class has following(important) methodes:
+ *generateProblem(nbItems, nbConcepts) generates 2 list for item/string and a bipartite graph
+ *maximumCardinalityMatching returns a matching using the HopcroftKarp algorithm(implemented from the jGraphT library) 
+ *minimumEdgeCovering uses the maximumCardinalityMatching to get the set then adds edges to it such that the nodes from itemList that were not in the matching apear at least once.
+ 
  
