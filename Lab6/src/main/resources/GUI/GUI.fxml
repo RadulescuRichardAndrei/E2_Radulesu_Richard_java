@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.text.Text?>
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="Controlers.ControlerButtons"
+            prefHeight="400.0" prefWidth="600.0"
+>
+
+
+    <top>
+
+        <HBox alignment="TOP_CENTER">
+            <children>
+                <Text text="Grid size:" textAlignment="CENTER"  />
+                <TextField text="5" fx:id="sizeInput" />
+                <Button text="SetSize" alignment="CENTER_RIGHT" contentDisplay="CENTER" textAlignment="CENTER" onAction="#ValueChange" />
+                <Button text="Create" alignment="CENTER_RIGHT" contentDisplay="CENTER" textAlignment="CENTER" onAction="#CreateButton" />
+            </children>
+
+        </HBox>
+    </top>
+    <center>
+
+        <GridPane fx:id="myGrid" alignment="CENTER" hgap="10" vgap="10">
+            <columnConstraints>
+                <ColumnConstraints halignment="CENTER"/>
+            </columnConstraints>
+        </GridPane>
+    </center>
+    <left>
+        <Label fx:id="winner"  textAlignment="CENTER" />
+    </left>
+
+    <bottom>
+        <HBox alignment="BOTTOM_CENTER">
+            <children>
+                <Button text="Load" alignment="CENTER_LEFT" contentDisplay="CENTER" textAlignment="CENTER" onAction="#loadButton" />
+                <Button text="Save" alignment="CENTER_RIGHT" contentDisplay="CENTER" textAlignment="CENTER" onAction="#saveButton" />
+                <Button text="ExportPNG" alignment="CENTER_RIGHT" contentDisplay="CENTER" textAlignment="CENTER" onAction="#exportButton" />
+            </children>
+        </HBox>
+    </bottom>
+
+
+</BorderPane>

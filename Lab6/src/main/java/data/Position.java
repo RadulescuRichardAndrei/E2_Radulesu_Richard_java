@@ -1,6 +1,8 @@
 package data;
 
-public class Position {
+import java.io.Serializable;
+
+public class Position implements Serializable {
     private int player;
     private boolean up,down,left,right;
 
@@ -54,5 +56,15 @@ public class Position {
 
     public void setRight(boolean right) {
         this.right = right;
+    }
+
+    @Override
+    public String toString() {
+        return "Position{" +
+                "up=" + up +
+                ", down=" + down +
+                ", left=" + left +
+                ", right=" + right +
+                '}';
     }
 }

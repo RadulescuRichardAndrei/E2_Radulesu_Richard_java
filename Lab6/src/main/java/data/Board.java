@@ -1,9 +1,14 @@
 package data;
 
-public class Board {
+import java.io.Serializable;
+
+public class Board implements Serializable {
 
     private Position[][] table;
     private int size;
+
+    public Board() {
+    }
 
     public Board(Position[][] table, int size) {
         this.table = table;
@@ -25,6 +30,7 @@ public class Board {
     public void setSize(int size) {
         this.size = size;
     }
+
 
     public void generateBoard(int size) {
         setSize(size);

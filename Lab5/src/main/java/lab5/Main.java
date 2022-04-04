@@ -31,7 +31,7 @@ public class Main {
         sv.implement(c);
 
         MaxFlowProblem M = new MaxFlowProblem();
-        M.generateProblem(4,3);
+        M.generateProblem(5,3);
         System.out.println(M.getGraph());
         System.out.println(M.maximumCardinalityMatching());
         System.out.println(M.minimumEdgeCovering());
