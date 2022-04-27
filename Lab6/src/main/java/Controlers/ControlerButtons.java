@@ -15,7 +15,6 @@ import javafx.scene.control.TextField;
 import javafx.scene.image.WritableImage;
 import javafx.scene.layout.GridPane;
 import javafx.scene.text.TextAlignment;
-
 import javax.imageio.ImageIO;
 import java.io.*;
 
@@ -53,9 +52,6 @@ public class ControlerButtons {
     }
     private void checkComputerWin(){
         Position[][] positions=Game.getGameBoard().getTable();
-
-
-
 
         if(! ((positions[lastX][lastY].isUp() && positions[lastX-1][lastY].getPlayer()==0 ) ||
             (positions[lastX][lastY].isDown() && positions[lastX+1][lastY].getPlayer()==0 ) ||
