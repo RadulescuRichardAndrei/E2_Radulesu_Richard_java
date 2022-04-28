@@ -1,11 +1,11 @@
-import DAO.DaoContinent;
+import DAO.DaoContinents;
 import Data.Continent;
 import org.junit.jupiter.api.Test;
 public class test1 {
 
     @Test
     void InsertAndSelect(){
-        DaoContinent daoContinent = new DaoContinent();
+        DaoContinents daoContinent = new DaoContinents();
         Continent testContinent= new Continent("13","Aspia");
 
         daoContinent.create(testContinent);
