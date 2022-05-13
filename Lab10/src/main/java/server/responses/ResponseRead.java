@@ -5,7 +5,7 @@ import Data.Messages;
 
 import java.util.List;
 
-public class ResponseRead implements Response{
+public class ResponseRead implements Response {
     List<String> unreadMessages;
     @Override
     public void responseToRequest(ClientData clData) {

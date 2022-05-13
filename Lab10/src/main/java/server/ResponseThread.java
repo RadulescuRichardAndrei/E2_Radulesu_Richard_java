@@ -1,9 +1,7 @@
 package server;
 
 import Data.ClientData;
-import client.Client;
 import server.responses.*;
-
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -42,7 +40,7 @@ public class ResponseThread implements Runnable {
             while (true) {
                 BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
                 String request = in.readLine();
-                System.out.println(request);
+                System.out.println(socket.toString()+ " " + request);
                 if (request.equals("exit")) {
                     sendToClient("exit");
                     break;

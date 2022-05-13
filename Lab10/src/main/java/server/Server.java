@@ -1,6 +1,7 @@
 package server;
 
 import Data.ClientData;
+import Data.Messages;
 import Data.SocialNetwork;
 import org.jgrapht.Graph;
 
@@ -19,6 +20,7 @@ public class Server {
     public Server() throws IOException {
         ServerSocket serverSocket=null;
         SocialNetwork.initiate("D:\\facultate\\E2_java_scripts\\GitHub\\Lab10\\src\\main\\resources\\users.xml");
+        Messages.deleteOldMessages();
         try{
             serverSocket=new ServerSocket(PORT);
             while (readyToAccept){

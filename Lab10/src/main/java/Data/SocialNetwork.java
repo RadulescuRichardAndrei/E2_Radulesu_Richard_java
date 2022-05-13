@@ -65,6 +65,7 @@ public class SocialNetwork {
 
     private static void addToXML(ClientData clData) {
         DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
+
         try {
 
 
@@ -101,7 +102,6 @@ public class SocialNetwork {
             StringWriter sw = new StringWriter();
             StreamResult result = new StreamResult(sw);
             tr.transform(source, result);
-
             String xmlString = sw.toString();
 
             File file = new File("D:\\facultate\\E2_java_scripts\\GitHub\\Lab10\\src\\main\\resources\\users.xml");

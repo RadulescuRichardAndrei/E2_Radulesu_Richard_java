@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="d49d2c6b-5f8f-4662-a06c-cbfa73c90bdb" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Data/ClientData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Data/ClientData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Data/Messages.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Data/Messages.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Data/SocialNetwork.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Data/SocialNetwork.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/server/ResponseThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/server/ResponseThread.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/server/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/server/Server.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/server/responses/ResponseRead.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/server/responses/ResponseRead.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utils/Hashing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utilitati/Hashing.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/users.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/users.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Data/ClientData.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Data/ClientData.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Data/Messages.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Data/Messages.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Data/SocialNetwork.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Data/SocialNetwork.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/server/ResponseThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/server/ResponseThread.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/server/Server.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/server/Server.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/users.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/users.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/utils/Hashing.class" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="2" />
+  </component>
+  <component name="ProjectId" id="297YxfjqXJv3qwu4w3u7eVFpp10" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+  </component>
+  <component name="RunManager" selected="Application.cl1">
+    <configuration name="cl1" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="client.Client" />
+      <module name="Lab10" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="cl2" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="client.Client" />
+      <module name="Lab10" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="se" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="server.Server" />
+      <module name="Lab10" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.se" />
+      <item itemvalue="Application.cl2" />
+      <item itemvalue="Application.cl1" />
+    </list>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d49d2c6b-5f8f-4662-a06c-cbfa73c90bdb" name="Changes" comment="" />
+      <created>1652465841430</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1652465841430</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

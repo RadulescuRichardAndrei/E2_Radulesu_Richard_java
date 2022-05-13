@@ -1,5 +1,7 @@
 package Data;
 
+import utilitati.Hashing;
+
 import javax.crypto.SecretKeyFactory;
 import javax.crypto.spec.PBEKeySpec;
 import java.security.NoSuchAlgorithmException;
@@ -10,7 +12,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Objects;
 
-import static utils.Hashing.passwordHashing;
+
 
 public class ClientData {
     private String username;
@@ -28,7 +30,8 @@ public class ClientData {
 
     public ClientData(String username, String password) throws NoSuchAlgorithmException, InvalidKeySpecException {
     this.username=username;
-    passwordHash=passwordHashing(password);
+
+    passwordHash=Hashing.passwordHashing(password);
     }
 
 
@@ -56,7 +59,7 @@ public class ClientData {
         return false;
     }
     public boolean authenticateByPassword(String password) throws NoSuchAlgorithmException, InvalidKeySpecException {
-        if(passwordHash.equals(passwordHashing(password)))
+        if(passwordHash.equals(Hashing.passwordHashing(password)))
             return true;
         return false;
     }
