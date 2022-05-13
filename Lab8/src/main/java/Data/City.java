@@ -27,6 +27,18 @@ public class City {
     }
 
     @Override
+    public String toString() {
+        return "City{" +
+                "id='" + id + '\'' +
+                ", name='" + name + '\'' +
+                ", country='" + country + '\'' +
+                ", capital=" + capital +
+                ", latitude=" + latitude +
+                ", longitude=" + longitude +
+                '}';
+    }
+
+    @Override
     public int hashCode() {
         return Objects.hash(id, name, country, capital, latitude, longitude);
     }
@@ -80,12 +92,14 @@ public class City {
     }
 
     public double distanceBetween(City otherCity){
-        double distLat= Math.toRadians(latitude)- Math.toRadians(otherCity.getLatitude());
-        double distLon= Math.toRadians(longitude)-Math.toRadians(otherCity.getLongitude());
-        double a= Math.pow(Math.sin(distLat/2),2)+
-                Math.cos(latitude)* Math.cos(otherCity.getLatitude())*
-                Math.pow(Math.sin(distLon/2),2);
-        double c= 2* Math.asin(Math.sqrt(a));
+        double distLat= Math.toRadians( latitude-otherCity.getLatitude() );
+        double distLon= Math.toRadians( longitude-otherCity.getLongitude() );
+
+        double a=Math.sin(distLat/2)* Math.sin(distLat/2)+
+                Math.cos(Math.toRadians(otherCity.getLatitude()))*
+                Math.cos(Math.toRadians( latitude))*
+                Math.sin(distLon/2)*Math.sin(distLon/2);
+        double c=2* Math.atan2(Math.sqrt(a),Math.sqrt(1-a));
         return c* 6371.0;
     }
 }

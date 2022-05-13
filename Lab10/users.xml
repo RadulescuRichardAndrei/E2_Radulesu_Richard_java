@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><Users>
+<User>
+<username>Andrei</username>
+<passwordHash>
+	<hash>39</hash>
+	<hash>-4</hash>
+	<hash>106</hash>
+	<hash>-102</hash>
+	<hash>-118</hash>
+	<hash>30</hash>
+	<hash>15</hash>	
+	<hash>3</hash>
+	<hash>-103</hash>
+	<hash>-11</hash>
+	<hash>-19</hash>
+	<hash>-113</hash>
+	<hash>-91</hash>
+	<hash>122</hash>
+	<hash>-77</hash>
+	<hash>84</hash>
+</passwordHash>
+</User>
+<User><username>Richi</username><passwordHash><hash>6</hash><hash>103</hash><hash>109</hash><hash>-126</hash><hash>74</hash><hash>40</hash><hash>91</hash><hash>7</hash><hash>-109</hash><hash>-40</hash><hash>34</hash><hash>-2</hash><hash>-12</hash><hash>-92</hash><hash>105</hash><hash>16</hash></passwordHash></User></Users>

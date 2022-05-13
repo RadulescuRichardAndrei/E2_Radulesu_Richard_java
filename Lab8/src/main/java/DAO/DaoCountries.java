@@ -23,12 +23,13 @@ public class DaoCountries implements Dao<Country>{
             prStmt.setString(2,name);
             ResultSet result= prStmt.executeQuery();
 
-            result.absolute(1);
-            Country foundContry= new Country(result.getString("id"),
-                    result.getString("name"), result.getString("code"),
-                    result.getString("continent"));
+            while (result.next()) {
+                Country foundContry = new Country(result.getString("id"),
+                        result.getString("name"), result.getString("code"),
+                        result.getString("continent"));
+                return foundContry;
+            }
 
-            return foundContry;
         } catch (SQLException e) {
             e.printStackTrace();
         }
