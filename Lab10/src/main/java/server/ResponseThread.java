@@ -158,7 +158,9 @@ public class ResponseThread implements Runnable {
 
             }
 
-        } catch (InvalidKeySpecException | NoSuchAlgorithmException | IOException e) {
+        }catch (IOException e){
+            System.out.println("Disconnect from: " + socket.toString());
+        } catch (InvalidKeySpecException | NoSuchAlgorithmException e) {
             e.printStackTrace();
         } finally {
             try {

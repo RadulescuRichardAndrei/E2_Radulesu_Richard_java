@@ -1,13 +1,15 @@
 package Controllers;
 
+import FileSystem.FileManager;
+
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
 public class KeyHandler implements KeyListener {
-    private boolean up,down,left,right;
+    private boolean up,down,left,right,save,heal;
 
     public KeyHandler() {
-        up=false; down=false; left=false; right=false;
+        up=false; down=false; left=false; right=false; heal=false;
     }
 
     public boolean isUp() {
@@ -24,6 +26,14 @@ public class KeyHandler implements KeyListener {
 
     public boolean isRight() {
         return right;
+    }
+
+    public boolean isSave() {
+        return save;
+    }
+
+    public boolean isHeal() {
+        return heal;
     }
 
     @Override
@@ -46,6 +56,12 @@ public class KeyHandler implements KeyListener {
             case KeyEvent.VK_A:
                 left=true;
                 break;
+            case  KeyEvent.VK_O:
+                save=true;
+                break;
+            case KeyEvent.VK_H:
+                heal=true;
+                break;
         }
     }
 
@@ -64,6 +80,12 @@ public class KeyHandler implements KeyListener {
                 break;
             case KeyEvent.VK_A:
                 left=false;
+                break;
+            case  KeyEvent.VK_O:
+                save=false;
+                break;
+            case KeyEvent.VK_H:
+                heal=false;
                 break;
         }
     }

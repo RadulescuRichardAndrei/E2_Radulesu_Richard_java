@@ -6,18 +6,23 @@ import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.Socket;
 import java.net.UnknownHostException;
+import java.util.Arrays;
 import java.util.Scanner;
 import java.util.stream.Collectors;
 
 public class Client {
     private static final String serverAddress="127.0.0.1";
     private static final int PORT=5002;
+    private static String[] commands={"login username password","register username password",
+    "friend username_1 username_2 ... username_k","send messageContent","read","exit","stop"};
 
     public static void main(String[] args){
 
         try {
             Socket socket=new Socket(serverAddress,PORT);
             Scanner keyboardInput = new Scanner(System.in);
+            for(String s:commands)
+                System.out.println(s);
             while (true){
                 PrintWriter out= new PrintWriter(socket.getOutputStream(),true);
                 BufferedReader in= new BufferedReader(new InputStreamReader(socket.getInputStream()));

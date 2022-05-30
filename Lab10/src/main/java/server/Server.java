@@ -36,6 +36,7 @@ public class Server {
         }finally {
             serverSocket.close();
         }
+        System.out.println("Inchidere server...");
     }
 
     public static void main(String[] args) throws IOException {
